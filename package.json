@@ -8,7 +8,11 @@
     "dev:watch": "nodemon -x npm run dev",
     "lint": "eslint --fix --ext .ts",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest --colors --noStackTrace --passWithNoTests",
+    "test:unit": "pnpm test -- --watch -c jest-unit-config.ts",
+    "test:integration": "pnpm test -- --watch -c jest-integration-config.ts",
+    "test:staged": "pnpm test -- --findRelatedTests --silent",
+    "test:ci": "pnpm test -- --coverage --silent"
   },
   "keywords": [],
   "author": "",
