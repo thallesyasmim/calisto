@@ -2,9 +2,10 @@
   "name": "calisto",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main/server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node .",
+    "dev:watch": "nodemon -x npm run dev"
   },
   "keywords": [],
   "author": "",
