@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/main/server.ts",
   "scripts": {
-    "dev": "ts-node .",
+    "dev": "ts-node -r tsconfig-paths/register .",
     "dev:watch": "nodemon -x npm run dev",
     "lint": "eslint --fix --ext .ts",
     "prepare": "husky install"
