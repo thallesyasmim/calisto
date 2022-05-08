@@ -12,7 +12,8 @@
     "test:unit": "pnpm test -- --watch -c jest-unit-config.ts",
     "test:integration": "pnpm test -- --watch -c jest-integration-config.ts",
     "test:staged": "pnpm test -- --findRelatedTests --silent",
-    "test:ci": "pnpm test -- --coverage --silent"
+    "test:ci": "pnpm test -- --coverage --silent",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored"
   },
   "keywords": [],
   "author": "",
@@ -25,12 +26,18 @@
     "express": "^4.18.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.31",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
