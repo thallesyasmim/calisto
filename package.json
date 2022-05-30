@@ -10,8 +10,8 @@
     "lint": "eslint --fix --ext .ts",
     "prepare": "husky install",
     "test": "jest --colors --noStackTrace --passWithNoTests",
-    "test:unit": "pnpm test -- --watch -c jest-unit-config.ts",
-    "test:integration": "pnpm test -- --watch -c jest-integration-config.ts",
+    "test:unit": "pnpm test -- --watch -c jest-unit-config.js",
+    "test:integration": "pnpm test -- --watch -c jest-integration-config.js",
     "test:staged": "pnpm test -- --findRelatedTests --silent",
     "test:ci": "pnpm test -- --coverage --silent",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored"
